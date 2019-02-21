@@ -5,6 +5,9 @@
     <title>CSS PROPERTY BASIC</title>
     <meta charset="utf-8">
     <style>
+      img{
+        float:right;
+      }
       body {
         background-image: url("backgroundFront.png") , url("backgroundBack.png");
         background-size : 100%;
@@ -16,8 +19,10 @@
       .box {border-width: thick;
             border-style:dashed;
             border-color:black;
-            border-RADIUS :50px 40px 20px 20PX;
-            margin-bottom : 20px;}
+            border-RADIUS :50px;
+            margin-bottom : 20px;
+            float: right;
+        }
       #box{
         display: inline - block; /* 인라인 상태에서 width, height 적용안됨 마진적용 */
         background-color:red;
@@ -29,6 +34,12 @@
     <div class="box">
       <h1>HTML / CSS / JAVASCRIPT</h1>
     </div>
+    <div class="box">
+      2
+
+    </div>
+    <br />
+    <img src="html-logo.png" />
     <p>외곽 더미 객체</p>
     <p>Cascading Style Sheets (CSS) is a style sheet language</P>
     <p> used for describing the presentation of a document written in a markup language like HTML.[1]</p>
