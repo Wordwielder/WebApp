@@ -363,6 +363,13 @@ for  (var i = 2; i <= 9; i++){
   console.log(`${i} 단`);
   for (var j = 1; j <= 9; j++){
     console.log(`${i} x ${j} = ${i*j}`);
-
   }
 }
+
+kim = {eng:50, math:50, soc:50};
+
+jung = {eng:50, math:50, soc:50};
+
+lee = {eng:50, math:50, soc:50};
+
+han = {eng:50, math:50, soc:50};
