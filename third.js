@@ -196,3 +196,119 @@ var o8 = {
 
 console.log(o8.greetBackwards());
 console.log("--------------------------------------------------------------");
+
+
+var f11  =function() { return "Hello!";}
+var f11_r = () => "Hello!!";
+console.log(f11_r());
+
+var f12 = function(name) {return `Hello ${name}`;}
+var f12_r = name => `Hello ${name}`;
+console.log(f12_r("Hong"));
+
+const f13=function(a,b) {return a+b;}
+const f13_r = (a,b) => a+b;
+console.log(f13_r(5,10));
+console.log("----------------------------------------------------------------");
+
+var o9 = {
+  name: 'Julie',
+  greetBackwards: function(){
+    const getReverseName = () => { // 내부 변수
+      var nameBackwards = '';
+      for( var i = this.name.length - 1;i>=0;--i){
+        nameBackwards += this.name[i];
+      }
+      return nameBackwards;
+    }
+    return `${getReverseName()} si eman ym, olleH`;
+  }
+};
+console.log( o9.greetBackwards() );
+console.log("----------------------------------------------------------------");
+
+var bruce = { name: "Brace"};
+var madeline = { name: "Madeline" };
+
+function greet() {
+  return `Hello, I'm ${this.name}`;
+}
+
+console.log(greet());
+console.log(greet.call(bruce));
+console.log(greet.call(madeline));
+console.log("----------------------------------------------------------------");
+
+function update ( birthYear, occupation){
+  this.birthYear = birthYear;
+  this.occupation = occupation;
+}
+
+update.call(bruce,1949,'singer'); // call 을 쓸경우 this 가 가능한데 첫번쨰 인자는 this 로 사용할 객체를 지정.
+console.log(bruce);
+update.call(madeline,1942,'actress');
+console.log(madeline);
+
+update.apply(bruce,[1955,'actor']);
+console.log(bruce);
+update.apply( madeline,[1918,'writer']);
+console.log(madeline);
+console.log("----------------------------------------------------------------");
+var xx;
+function fs( xx ) {
+  return xx + 3;
+}
+
+console.log(fs(5));
+console.log(xx);
+console.log("----------------------------------------------------------------");
+
+function fs1() {
+  console.log('one');
+}
+
+function fs2() {
+  console.log('two');
+}
+
+fs2();
+fs1();
+fs2();
+console.log("----------------------------------------------------------------");
+
+var xxx = 3; // 전역 스코프
+function fs3() {
+  console.log(xxx);
+  //console.log(yyy);
+}
+{
+  //var yyy = 5; // const 나 let 는 반드시 변수 선언 후에사용가능
+  fs3();
+}
+
+console.log("----------------------------------------------------------------");
+
+let globalFunc
+{
+  let blockVar = 'a';
+  globalFunc = function(){
+    console.log(blockVar);
+  }
+}
+console.log(typeof globalFunc);
+globalFunc();
+console.log("----------------------------------------------------------------");
+let fs4;
+{
+  let o = {note: 'Safe'};
+  fs4 = function() { return o; }
+}
+
+console.log(typeof fs4);
+console.log(fs4());
+let oRef = fs4();
+console.log(typeof oRef);
+console.log(oRef);
+oRef.note = "Not so safe after all";
+console.log(oRef);
+console.log("----------------------------------------------------------------");
