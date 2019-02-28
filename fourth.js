@@ -326,3 +326,8 @@ if (stats.N > 2) {
 }
 
 console.log(stats);
+
+console.log("----------------------------------------------------------------")
+
+
+let product = {tv:5000,vtr:25000,camera:1500,tv:500000,keyboard:3500};
