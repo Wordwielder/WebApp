@@ -15,7 +15,7 @@ function input_student() {
     let subject1 = parseInt( document.getElementById( 'txt-subject1' ).value, 10 );
     let subject2 = parseInt( document.getElementById( 'txt-subject2' ).value, 10 );
     let subject3 = parseInt( document.getElementById( 'txt-subject3' ).value, 10 );
-
+//웹페이지에서 입력된 값은 다 문자열, 문자열은 산술연산에 활용할수 없으므로 parseInt를 사용해 정수로 변
     if ( ( name.length > 0 ) &&
          ( subject1 >= MIN_SUBJECT && subject1 <= MAX_SUBJECT ) &&
          ( subject2 >= MIN_SUBJECT && subject2 <= MAX_SUBJECT ) &&
@@ -31,12 +31,12 @@ function input_student() {
         student.grade = "";
         student.rank = 1;
         calculate( student );
-
+// calculate함수 사용. 랭크를 제외한 내용 계산함. 총점 평균 등급
         students.push( student );
         calculate_rank();
 
         sortStudents.push( students[ students.length - 1] );
-        //sortStudents.sort( ( x, y ) => x.average < y.average );
+        //sortStudents.sort( ( x, y ) => x.average < y.average );//배열에 담음
         sort_average( sortStudents )
         console.log( sortStudents );
 
