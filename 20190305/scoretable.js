@@ -11,10 +11,14 @@ let sortStudents = [];
 
 // 학생 등록
 function input_student() {
-    let name = document.getElementById( 'txt-name' ).value;
-    let subject1 = parseInt( document.getElementById( 'txt-subject1' ).value, 10 );
-    let subject2 = parseInt( document.getElementById( 'txt-subject2' ).value, 10 );
-    let subject3 = parseInt( document.getElementById( 'txt-subject3' ).value, 10 );
+  //  let name = document.getElementById( 'txt-name' ).value;
+    let name = $("#txt-name").val();
+  //  let subject1 = parseInt( document.getElementById( 'txt-subject1' ).value, 10 );
+    let subject1 = parseInt( $('#txt-subject1' ).val(),10);
+  // let subject2 = parseInt( document.getElementById( 'txt-subject2' ).value, 10 );
+    let subject2 = parseInt( $('#txt-subject2' ).val(),10);
+  //  let subject3 = parseInt( document.getElementById( 'txt-subject3' ).value, 10 );
+    let subject3 = parseInt( $('#txt-subject3' ).val(),10);
 //웹페이지에서 입력된 값은 다 문자열, 문자열은 산술연산에 활용할수 없으므로 parseInt를 사용해 정수로 변
     if ( ( name.length > 0 ) &&
          ( subject1 >= MIN_SUBJECT && subject1 <= MAX_SUBJECT ) &&
@@ -44,16 +48,21 @@ function input_student() {
     } else {
         window.alert( "Error : 이름이 없거나 과목 점수 입력 오류!!!" );
     }
-    document.getElementById( 'txt-name' ).value = "";
-    document.getElementById( 'txt-subject1' ).value = "";
-    document.getElementById( 'txt-subject2' ).value = "";
-    document.getElementById( 'txt-subject3' ).value = "";
-
-    document.getElementById( 'txt-name' ).focus();
+    //document.getElementById( 'txt-name' ).value = "";
+    $("#txt-name").val("");
+    //document.getElementById( 'txt-subject1' ).value = "";
+    $("#txt-subject1").val("");
+    //document.getElementById( 'txt-subject2' ).value = "";
+    $("#txt-subject2").val("");
+    //document.getElementById( 'txt-subject3' ).value = "";
+    $("#txt-subject3").val("");
+    //document.getElementById( 'txt-name' ).focus();
+    $("#txt-name").focus("");
 }
 
 function search_student() {
-    let txtName = document.getElementById( 'txt-name' ).value;
+    //let txtName = document.getElementById( 'txt-name' ).value;
+    let txtName = $("#txt-name").val();
     let sortNameStudents = [];
     let searchResult = [];
     let searchIndex;
@@ -175,6 +184,7 @@ function clearTable( parentInput, parentAverage ) {
 
 function printTableHeader( parent, title ) {
     let caption = document.createElement( 'caption' );
+    $("caption")
     let nameHeader = document.createElement( 'th' );
     let subject1Header = document.createElement( 'th' );
     let subject2Header = document.createElement( 'th' );
