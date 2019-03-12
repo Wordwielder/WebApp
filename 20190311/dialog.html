@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="" data-role="page" id="page1" data-position="fixed">
+      <div class="" data-role="header">
+        <h1>Dialog Home</h1>
+      </div>
+      <div class="" data-role="content">
+        <p>Page content goes here. #1</p>
+        <a href="#dialog1" data-role = 'button' data-rel="dialog"> Dialog Page 1</a>
+        <a href="#dialog2" data-role = 'button' > Dialog Page 2</a>
+        <a href="#dialog3" data-role = 'button' > Action sheets page 1</a>
+        <a href="#dialog4" data-role = 'button' > Action sheets page 2</a>
+      </div>
+      <div class="" data-role="footer" data-position="fixed">
+        <h4>Page footer</h4>
+      </div>
+    </div>
+
+    <div class="" data-role="page1" id="dialog1">
+      <div class="" data-role="header">
+        <h1>header영역</h1>
+      </div>
+      <div class="" data-role="content">
+        <p>기본형 페이지</p>
+        <a href="#dialog1" data-transition="slidedown">액션시트 페이지1</a>
+        <a href="#dialog2" data-transition="slidedown">액션시트 페이지2</a>
+      </div>
+      <div class="" data-role="footer" data-position="fixed">
+        <h4>Page footer</h4>
+      </div>
+    </div>
+
+    <div class="" data-role ="dialog" id="dialog3">
+      <div class="" data-role="content">
+        <p>Action sheet 1</p>
+          <a href="#" data-role="button">select 1</a>
+          <a href="#" data-role="button">select 2</a>
+          <a href="#" data-role="button">select 3</a>
+          <a href="#" data-role="button">select 4</a>
+          <a href="#" data-role = "button" data-rel="back">Cancle</a>
+      </div>
+
+    </div>
+    <div class="" data-role ="dialog" id="dialog4">
+      <div class="" data-role="content">
+          <p>Action sheet 2</p>
+          <p>delete?</p>
+          <a href="#" data-role = "button" data-rel="back">Yes</a>
+          <a href="#dialog3" data-role = "button" data-rel="back">No</a>
+      </div>
+
+    </div>
+
+  </body>
+</html>
